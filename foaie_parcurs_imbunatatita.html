@@ -445,7 +445,7 @@
                 <strong>Nr. auto:</strong> <input type="text" id="nrAuto" placeholder="B-123-ABC">
             </div>
             <div class="form-group">
-                <strong>Nume șofer:</strong> <input type="text" id="numesofer" placeholder="Popescu Ion">
+                <strong>Nume sofer:</strong> <input type="text" id="numesofer" placeholder="Popescu Ion">
             </div>
         </div>
         
@@ -506,8 +506,8 @@
                 <input type="text" id="semnaturaControl" placeholder="Nume semnatar control financiar">
             </div>
             <div class="form-group" style="flex:1; min-width:200px;">
-                <strong>Semnătură șofer:</strong>
-                <input type="text" id="semnaturaSofer" placeholder="Nume semnatar șofer">
+                <strong>Semnătură sofer:</strong>
+                <input type="text" id="semnaturaSofer" placeholder="Nume semnatar sofer">
             </div>
         </div>
 
@@ -938,7 +938,7 @@
         }
 
         function reseteazaSetari() {
-            if (confirm('Resetați setările pentru șofer/auto nou?')) {
+            if (confirm('Resetați setările pentru sofer/auto nou?')) {
                 localStorage.removeItem('setariPermanente');
                 document.getElementById('unitatea').value = '';
                 document.getElementById('nrAuto').value = '';
@@ -1269,7 +1269,7 @@
                 doc.text(norm(document.getElementById('semnaturaControl').value), 90, signY);
                 doc.line(25, signY + 2, 160, signY + 2);
 
-                doc.text('Semn. șofer:', 25, signY + 10);
+                doc.text('Semn. sofer:', 25, signY + 10);
                 doc.text(norm(document.getElementById('semnaturaSofer').value), 90, signY + 10);
                 doc.line(25, signY + 12, 160, signY + 12);
 
@@ -1364,3 +1364,4 @@
     </script>
 </body>
 </html>
+
