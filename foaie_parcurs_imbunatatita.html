@@ -413,7 +413,7 @@
                 </div>
                 <div class="form-group">
                     <label>Preț (lei/l):</label>
-                    <input type="number" id="pretCombustibil" value="8.2" min="0" step="0.01" style="width: 80px;">
+                    <input type="number" id="pretCombustibil" value="7.8" min="0" step="0.01" style="width: 80px;">
                 </div>
                 <button onclick="salveazaSetari()" class="btn-success">💾 Salvează setări</button>
                 <button onclick="reseteazaSetari()" class="btn-warning">🔄 Resetează</button>
@@ -442,10 +442,10 @@
                 <strong>Data:</strong> <input type="date" id="data">
             </div>
             <div class="form-group">
-                <strong>Nr. auto:</strong> <input type="text" id="nrAuto" placeholder="B-123-ABC">
+                <strong>Nr. auto:</strong> <input type="text" id="nrAuto" placeholder="GL-99-ACV">
             </div>
             <div class="form-group">
-                <strong>Nume sofer:</strong> <input type="text" id="numesofer" placeholder="Popescu Ion">
+                <strong>Nume sofer:</strong> <input type="text" id="numesofer" placeholder="Nastasa Vasile">
             </div>
         </div>
         
@@ -834,7 +834,7 @@
             let kmValues = [];
 
             const consum = parseFloat(document.getElementById('consumSpecific').value) || 7;
-            const pret = parseFloat(document.getElementById('pretCombustibil').value) || 7.5;
+            const pret = parseFloat(document.getElementById('pretCombustibil').value) || 7.8;
 
             rows.forEach(row => {
                 const cells = row.cells;
@@ -944,7 +944,7 @@
                 document.getElementById('nrAuto').value = '';
                 document.getElementById('numesofer').value = '';
                 document.getElementById('consumSpecific').value = '7';
-                document.getElementById('pretCombustibil').value = '7.5';
+                document.getElementById('pretCombustibil').value = '7.8';
                 showNotification('Setări resetate!');
             }
         }
@@ -1364,4 +1364,3 @@
     </script>
 </body>
 </html>
-
